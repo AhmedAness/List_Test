@@ -23,6 +23,22 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        freeVersion {
+            applicationId "com.example.dt.Freeloginandlist"
+            buildConfigField("String","BaseURL","\"https://api.github.com/users/JakeWharton/\"")
+//            dimension "version"
+        }
+
+        paidVersion {
+            applicationId "com.example.dt.Paidloginandlist"
+            buildConfigField("String","BASE_URL","\"https://api.github.com/users/JakeWharton/\"")
+//            dimension "version"
+        }
+    }
 }
 
 dependencies {

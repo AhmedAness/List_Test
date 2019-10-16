@@ -65,11 +65,19 @@ public class Repository {
         }
 
         @Override
-        protected Void doInBackground(List<Course>... notes) {
-            for (int i = 0; i < notes[0].size(); i++) {
-                coursesDao.Insert( notes[0].get(i));
+        protected Void doInBackground(List<Course>... courses) {
+            for (int i = 0; i < courses[0].size(); i++) {
+                coursesDao.Insert( courses[0].get(i));
             }
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            if (Data2.size()>0&&Data.getValue().size()<=0) {
+                Data.setValue(Data2);
+            }
         }
     }
 

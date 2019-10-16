@@ -1,11 +1,13 @@
 package com.example.dt.List_Test.Model;
 
+import com.example.dt.List_Test.BuildConfig;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    static final String BASE_URL = "https://api.github.com/users/JakeWharton/";
+    static final String BASE_URL = BuildConfig.BASE_URL;
 
     private static Retrofit.Builder retrofit = null;
 

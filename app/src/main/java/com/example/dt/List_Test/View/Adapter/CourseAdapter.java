@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
@@ -13,11 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.dt.List_Test.Model.Course;
 import com.example.dt.List_Test.R;
 
-public class NoteAdapter extends ListAdapter<Course,NoteAdapter.NoteHolder> {
+public class CourseAdapter extends ListAdapter<Course, CourseAdapter.CourseHolder> {
 
-    OnRecyclerItemClick listner;
-
-    public NoteAdapter() {
+    public CourseAdapter() {
         super(diffCallback);
     }
 
@@ -35,50 +34,41 @@ public class NoteAdapter extends ListAdapter<Course,NoteAdapter.NoteHolder> {
 
     @NonNull
     @Override
-    public NoteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CourseHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemview = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_item, parent, false);
-        return new NoteHolder(itemview);
+        return new CourseHolder(itemview);
     }
 
-    public Course GetNoteAt(int position) {
+    public Course GetCourseAt(int position) {
         return getItem(position);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CourseHolder holder, int position) {
         Course course = getItem(position);
-        holder.Title.setText(course.getName());
+        holder.Name.setText(course.getName());
         holder.Description.setText(course.getDesc());
-        holder.Preority.setText(String.valueOf(course.getLink()));
+        holder.Link.setText(String.valueOf(course.getLink()));
     }
 
-    protected class NoteHolder extends RecyclerView.ViewHolder {
-        TextView Title;
+    protected class CourseHolder extends RecyclerView.ViewHolder {
+        TextView Name;
         TextView Description;
-        TextView Preority;
+        TextView Link;
 
-        public NoteHolder(@NonNull View itemView) {
+        public CourseHolder(@NonNull View itemView) {
             super(itemView);
-            Title = itemView.findViewById(R.id.FullName);
+            Name = itemView.findViewById(R.id.FullName);
             Description = itemView.findViewById(R.id.Desc_item);
-            Preority = itemView.findViewById(R.id.Link_item);
+            Link = itemView.findViewById(R.id.Link_item);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listner.OnItemClicked(getItem(getAdapterPosition()));
+                    Toast.makeText(v.getContext(), "Course Name :"+ Name, Toast.LENGTH_SHORT).show();
                 }
             });
         }
     }
-
-    public interface OnRecyclerItemClick{
-        void OnItemClicked(Course course);
-    }
-    public void SetOnItemClickListner(OnRecyclerItemClick listner){
-        this.listner=listner;
-    }
-
-
 }

@@ -21,21 +21,21 @@ public class MasterViewModel extends AndroidViewModel {
         repository=new Repository(application);
     }
 
-    public void InsertNote(List<Course> course){
+    public void InsertCourse(List<Course> course){
         repository.Insert(course);
     }
 
-    public void UpdatetNote(Course course){
+    public void UpdatetCourse(Course course){
         repository.Update(course);
     }
-    public void DeleteNote(Course course){
+    public void DeleteCourse(Course course){
         repository.Delete(course);
     }
-    public void DeleteAlltNote(ArrayList<Course> body){
+    public void DeleteAlltCources(ArrayList<Course> body){
         repository.DeleteAll(body);
     }
 
-    public LiveData<List<Course>> GetAllNotes(int Last){
+    public LiveData<List<Course>> GetAllCourses(int Last){
         return repository.getData();
     }
 
