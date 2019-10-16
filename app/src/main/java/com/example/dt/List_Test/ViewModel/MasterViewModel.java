@@ -1,4 +1,4 @@
-package com.example.dt.loginandlist.ViewModel;
+package com.example.dt.List_Test.ViewModel;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.dt.loginandlist.Model.Course;
-import com.example.dt.loginandlist.Model.Repository;
+import com.example.dt.List_Test.Model.Course;
+import com.example.dt.List_Test.Model.Repository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,5 @@
-package com.example.dt.loginandlist.Model;
+package com.example.dt.List_Test.Model;
 
-import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;

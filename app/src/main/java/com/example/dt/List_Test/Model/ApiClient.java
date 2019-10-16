@@ -1,4 +1,4 @@
-package com.example.dt.loginandlist.Model;
+package com.example.dt.List_Test.Model;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

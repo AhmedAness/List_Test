@@ -1,4 +1,4 @@
-package com.example.dt.loginandlist.View.Adapter;
+package com.example.dt.List_Test.View.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dt.loginandlist.Model.Course;
-import com.example.dt.loginandlist.R;
+import com.example.dt.List_Test.Model.Course;
+import com.example.dt.List_Test.R;
 
 public class NoteAdapter extends ListAdapter<Course,NoteAdapter.NoteHolder> {
 

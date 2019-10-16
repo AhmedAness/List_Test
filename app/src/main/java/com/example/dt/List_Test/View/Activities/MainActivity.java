@@ -1,8 +1,7 @@
-package com.example.dt.loginandlist.View.Activities;
+package com.example.dt.List_Test.View.Activities;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -15,12 +14,12 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dt.loginandlist.Model.ApiClient;
-import com.example.dt.loginandlist.Model.ApiInterface;
-import com.example.dt.loginandlist.Model.Course;
-import com.example.dt.loginandlist.R;
-import com.example.dt.loginandlist.View.Adapter.NoteAdapter;
-import com.example.dt.loginandlist.ViewModel.MasterViewModel;
+import com.example.dt.List_Test.Model.ApiClient;
+import com.example.dt.List_Test.Model.ApiInterface;
+import com.example.dt.List_Test.Model.Course;
+import com.example.dt.List_Test.R;
+import com.example.dt.List_Test.View.Adapter.NoteAdapter;
+import com.example.dt.List_Test.ViewModel.MasterViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
